@@ -1,0 +1,51 @@
+
+
+<!-- para que [(ngModel funcione)] es necesario importar import { FormsModule } from '@angular/forms' en el aap.module.ts 
+e incluirlo en imports:[FormsModule,]-->
+<div>
+ 
+    <br>
+    <h3>Alta de Usuario</h3>
+    <br>
+    <p  ><mark class="col text-danger"><strong>Complete datos para alta</strong></mark></p>
+    <br>
+    <p>  Id   : <input  [(ngModel)]="use.id">
+    
+     Nombre : <input type ="string" [(ngModel)] = "use.nombre"> 
+    
+     Email : <input type="string" [(ngModel)]="use.email"></p>
+
+    <p><button (click)="altaUsers(use)" class="btn btn-outline-success">Confirmar alta</button>
+          
+    </p>
+     <br>
+  
+   
+
+</div>
+
+<p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar Usuario </strong></mark></p>
+  <br>
+  
+  
+  <div>
+  <tr *ngFor="let user of us ">
+ 
+      
+  
+
+   <p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{user.id}}&nbsp; &nbsp; &nbsp; &nbsp;  Nombre  *: <input type="string" [(ngModel)]="user.nombre">
+     
+       Email: <input type="string" [(ngModel)]="user.email">&nbsp;
+
+      <button (click)="modifUsers(user)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
+        <button (click)="delUsers(user)"  class="btn btn-outline-danger">Borrar Usuario </button></p>
+     
+        <br>
+  
+
+  </tr>
+
+ 
+
+</div>
