@@ -12,7 +12,8 @@ export class UsersService {
 
   constructor(private httpClient:HttpClient) { }
   //dirección del back
-  private baseURL="https://acatarados-back-senioritty.cleverapps.io/users";
+  //private baseURL="https://acatarados-back-senioritty.cleverapps.io/users";
+  private baseURL="https://localhost:8080/users";
   
   usr = {
     id:" ",

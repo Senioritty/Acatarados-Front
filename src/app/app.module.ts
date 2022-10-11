@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { PreguntaComponent } from './pregunta/pregunta.component';
 const routes: Routes = [
   {path:'users', component:UsersComponent},
   {path:'', redirectTo:'users', pathMatch:'full'}
@@ -13,7 +14,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    PreguntaComponent
   ],
   imports: [
     BrowserModule,
